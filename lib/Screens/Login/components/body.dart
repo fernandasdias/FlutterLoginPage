@@ -4,6 +4,7 @@ import 'package:login/Screens/Login/components/background.dart';
 import 'package:login/Screens/Login/components/rounded_input_field.dart';
 import 'package:login/Screens/Login/components/rounded_password_field.dart';
 import 'package:login/components/rounded_button.dart';
+import 'package:login/constants.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -33,6 +34,22 @@ class Body extends StatelessWidget {
           RoundedButton(
             text: 'LOGIN',
             press: () {},
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Dont have an Account?',
+                style: TextStyle(color: kPrimaryGrayColor),
+              ),
+              Text(
+                'Sign Up',
+                style: TextStyle(
+                  color: kPrimaryColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+            ],
           )
         ],
       ),

@@ -9,24 +9,24 @@ import '../../../constants.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    var size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Background(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            "Welcome Fernanda",
+            'Welcome Fernanda',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           SizedBox(height: size.height * 0.04),
           SvgPicture.asset(
-            "assets/icons/chat.svg",
+            'assets/icons/chat.svg',
             height: size.height * 0.45,
           ),
           SizedBox(height: size.height * 0.05),
           RoundedButton(
-            text: "LOGIN",
+            text: 'LOGIN',
             press: () {
               Navigator.push(
                 context,
@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
             },
           ),
           RoundedButton(
-            text: "REGISTER",
+            text: 'REGISTER',
             color: kPrimaryLightColor,
             textColor: Colors.black,
             press: () {},

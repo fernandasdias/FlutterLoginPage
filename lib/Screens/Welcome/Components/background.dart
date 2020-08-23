@@ -7,10 +7,10 @@ class Background extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size; //This size has the total height and width of screen
+    var size = MediaQuery.of(context)
+        .size; //This size has the total height and width of screen
     return Container(
       height: size.height,
       width: double.infinity,
@@ -21,7 +21,7 @@ class Background extends StatelessWidget {
             top: 0,
             left: 0,
             child: Image.asset(
-              "assets/images/main_top.png",
+              'assets/images/main_top.png',
               width: size.width * 0.3,
             ),
           ),
@@ -29,7 +29,7 @@ class Background extends StatelessWidget {
             bottom: 0,
             left: 1,
             child: Image.asset(
-              "assets/images/main_bottom.png",
+              'assets/images/main_bottom.png',
               width: size.width * 0.2,
             ),
           ),
