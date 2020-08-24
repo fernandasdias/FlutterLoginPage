@@ -3,8 +3,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:login/Screens/Login/components/background.dart';
 import 'package:login/Screens/Login/components/rounded_input_field.dart';
 import 'package:login/Screens/Login/components/rounded_password_field.dart';
+
+import 'package:login/Screens/Sign%20Up/signup_screen.dart';
+import 'package:login/components/already_have_an_account_check.dart';
 import 'package:login/components/rounded_button.dart';
-import 'package:login/constants.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -22,8 +24,10 @@ class Body extends StatelessWidget {
             'LOGIN',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
+          SizedBox(height: size.height * 0.040),
           SvgPicture.asset('assets/icons/login.svg',
-              height: size.height * 0.35),
+              height: size.height * 0.30),
+          SizedBox(height: size.height * 0.040),
           RoundedInputField(
             hintText: 'Email',
             onChanged: (value) {},
@@ -35,21 +39,18 @@ class Body extends StatelessWidget {
             text: 'LOGIN',
             press: () {},
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'Dont have an Account?',
-                style: TextStyle(color: kPrimaryGrayColor),
-              ),
-              Text(
-                'Sign Up',
-                style: TextStyle(
-                  color: kPrimaryColor,
-                  fontWeight: FontWeight.bold,
+          SizedBox(height: size.height * 0.020),
+          AlreadyHaveAnAccountCheck(
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SignUpScreen();
+                  },
                 ),
-              )
-            ],
+              );
+            },
           )
         ],
       ),
